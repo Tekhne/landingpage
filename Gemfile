@@ -30,6 +30,7 @@ gem 'rails-controller-testing', '>= 1.0.2', group: [:test]
 gem 'rspec-rails',              '~> 3.7.2', group: [:development, :test]
 gem 'rubocop',                  '~> 0.56.0', group: [:development, :test]
 gem 'sass-rails',               '~> 5.0.7'
+gem 'selenium-webdriver',       '~> 3.12.0', group: [:test]
 gem 'spring',                   '~> 2.0.2', group: [:development]
 gem 'spring-commands-rspec',    '~> 1.0.4', group: [:development]
 gem 'spring-watcher-listen',    '~> 2.0.1', group: [:development]
