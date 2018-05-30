@@ -20,6 +20,7 @@ end
 # gem 'redis',                  '~> 4.0' # Action Cable
 # gem 'tzinfo-data',            platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'brakeman',                 '~> 4.3.0', group: [:development]
+gem 'capybara',                 '~> 3.1.1', group: [:test]
 gem 'dawnscanner',              '~> 1.6.8', group: [:development], require: false
 gem 'factory_bot_rails',        '~> 4.10.0', group: [:development, :test]
 gem 'listen',                   '>= 3.1.5', '< 3.2', group: [:development]
