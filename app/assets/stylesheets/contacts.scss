@@ -1,0 +1,233 @@
+.contacts-new {
+  .hero-wrapper {
+    background-color: rgb(230, 244, 255);
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.15);
+    padding-bottom: 2rem;
+
+    @media (min-width: 48.4375rem) {
+      background-color: none;
+      background-image: radial-gradient(
+        ellipse,
+        rgb(244, 250, 255),
+        rgb(230, 244, 255)
+      );
+      padding-bottom: 3rem;
+      padding-top: 1rem;
+      transform: skewY(-3deg);
+    }
+  }
+
+  .hero {
+    @media (min-width: 48.4375rem) {
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      transform: skewY(3deg);
+    }
+  }
+
+  .hero-text-wrapper {
+    margin-top: 1rem;
+
+    @media (min-width: 48.4375rem) {
+      align-self: center;
+    }
+  }
+
+  .hero-heading {
+    color: $color-black;
+    font-family: $font-family-heading;
+    font-size: 2rem;
+
+    @media (min-width: 25rem) {
+      font-size: 2.5rem;
+    }
+
+    @media (min-width: 48.4375rem) {
+      font-size: 2.8rem;
+      max-width: 24rem;
+    }
+  }
+
+  .hero-statement-wrapper {
+    margin-top: -0.5rem;
+
+    @media (min-width: 25rem) {
+      margin-top: -0.7rem;
+    }
+  }
+
+  .hero-statement {
+    color: $color-muted-text;
+    font-size: 1rem;
+
+    @media (min-width: 25rem) {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 48.4375rem) {
+      font-size: 1.5rem;
+      max-width: 30rem;
+    }
+  }
+
+  .hero-image-wrapper {
+    align-self: center;
+    margin-top: 1rem;
+  }
+
+  .hero-image {
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow-dark;
+    height: auto;
+    width: 100%;
+  }
+
+  .benefits-wrapper {
+    margin-top: 1.5rem;
+
+    @media (min-width: 48.4375rem) {
+      margin-top: 3.5rem;
+    }
+  }
+
+  .benefits {
+    @media (min-width: 46.375rem) {
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .benefit-heading {
+    font-family: $font-family-heading;
+    font-size: 1.35rem;
+  }
+
+  .benefit-icon-smile {
+    color: $color-green-icon;
+  }
+
+  .benefit-statement {
+    color: $color-muted-text;
+  }
+
+  .benefit-icon-file-medical-alt {
+    color: $color-blue-icon;
+  }
+
+  .benefit-icon-list-ol {
+    color: $color-orange-icon;
+  }
+
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 0.8rem;
+  }
+
+  .form-inner-wrapper {
+    background-color: $color-form-bg;
+    border-radius: $border-radius-lg;
+    padding: 1rem;
+
+    @media (min-width: 44.0625rem) {
+      align-self: center;
+      justify-self: center;
+      max-width: 29.6875rem;
+    }
+  }
+
+  .form-statement {
+    color: $color-muted-text;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+
+  .form {
+    margin-top: 1rem;
+  }
+
+  .form-label {
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .form-field {
+    background-color: $color-field-bg;
+    border-radius: $border-radius-lg;
+    border: none;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    color: $color-black;
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: $color-input-placeholder;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-input-placeholder;
+    }
+
+    &:-moz-placeholder {
+      color: $color-input-placeholder;
+    }
+
+    &::placeholder {
+      color: $color-input-placeholder;
+    }
+  }
+
+  .form-button {
+    background-color: $color-button;
+    border-radius: $border-radius-lg;
+    border: none;
+    color: $color-white;
+    font-family: $color-primary;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+
+    &:active {
+      background-color: $color-button-active;
+    }
+
+    &:hover {
+      background-color: $color-button-hover;
+    }
+
+    &:disabled {
+      background-color: $color-button-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  .form-privacy {
+    color: $color-muted-text;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  .copywrite-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .copywrite-copy {
+    align-self: center;
+    color: $color-muted-text;
+    font-size: 0.8rem;
+    justify-self: center;
+    margin: 2rem 0;
+  }
+}

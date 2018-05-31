@@ -1,0 +1,43 @@
+$border-radius-lg: 8px;
+$border-radius-sm: 4px;
+
+$box-shadow-dark: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+$box-shadow-light: 5px 5px 12px 0 rgba(0, 0, 0, 0.15);
+
+// https://coolors.co/045fd6-d73e04-80d45f-273038-c7d2d8
+
+$color-black: rgb(39, 48, 56);
+$color-blue: rgb(4, 95, 214);
+$color-gray: rgb(199, 210, 216);
+$color-green: rgb(128, 212, 95);
+$color-orange: rgb(215, 62, 4);
+$color-red: rgb(189, 0, 20);
+$color-white: rgb(255, 255, 255);
+
+$color-blue-icon: rgba($color-blue, 0.5);
+$color-button-active: darken($color-green, 15%);
+$color-button-disabled: $color-gray;
+$color-button-hover: darken($color-green, 10%);
+$color-button: $color-green;
+$color-danger: $color-red;
+$color-field-bg: lighten($color-gray, 10%);
+$color-field-border: $color-black;
+$color-field-error-bg: rgba($color-danger, 0.16);
+$color-field-error-fg: $color-danger;
+$color-form-bg: lighten($color-gray, 15%);
+$color-green-icon: rgba($color-green, 0.5);
+$color-input-placeholder: darken($color-gray, 20%);
+$color-muted-text: rgba($color-black, 0.75);
+$color-orange-icon: rgba($color-orange, 0.4);
+$color-primary: $color-blue;
+$color-secondary: $color-orange;
+$color-success: $color-green;
+
+$font-family-heading: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-primary: Raleway, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+
+

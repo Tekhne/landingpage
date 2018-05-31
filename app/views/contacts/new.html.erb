@@ -1,0 +1,150 @@
+<div class="contacts-new">
+
+  <div class="hero-wrapper">
+    <div class="viewport-wrapper">
+      <div class="content-wrapper">
+
+        <div class="hero">
+
+          <div class="hero-text-wrapper">
+
+            <h1 class="hero-heading">Take Control of Your Career!</h1>
+
+            <div class="hero-statement-wrapper">
+              <div class="hero-statement">
+                Use our career management and job search tools to help you get
+                organized and take the actions necessary for success.
+              </div>
+            </div>
+
+          </div>
+
+          <div class="hero-image-wrapper">
+
+            <picture>
+              <source media="(max-width: 386px)" srcset="<%= image_path 'hero_301px' %>" />
+              <source media="(min-width: 387px) and (max-width: 774px)" srcset="<%= image_path 'hero_900px' %>" />
+              <source media="(min-width: 775px)" srcset="<%= image_path 'hero_600px' %>" />
+              <%= image_tag 'hero_600px', alt: 'Job Seeker', class: 'hero-image' %>
+            </picture>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="viewport-wrapper">
+    <div class="content-wrapper">
+      <div class="benefits-wrapper">
+        <div class="benefits">
+
+          <div>
+
+            <h2 class="benefit-heading">
+              <%= icon('fas', 'smile', class: 'benefit-icon-smile') %>
+              Reduce Fear
+            </h2>
+
+            <p class="benefit-statement">
+              Eliminate your concerns about falling behind, or not being able to
+              grab new opportunities. We'll help you <strong>discover and learn
+              skills</strong> which are valuable to employers, so you can get the
+              jobs and promotions you want.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h2 class="benefit-heading">
+              <%= icon('fas', 'file-medical-alt', class: 'benefit-icon-file-medical-alt') %>
+              Reduce Stress
+            </h2>
+
+            <p class="benefit-statement">
+              Get rid of the anxiety created when you try to <strong>manage the
+              events and relationships in your professional life</strong>.
+              We'll help you track the phases your job application is going
+              through, remember the name of that colleague you met last week,
+              remind you to go to that professional meet up next Friday, and much
+              more.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h2 class="benefit-heading">
+              <%= icon('fas', 'list-ol', class: 'benefit-icon-list-ol') %>
+              Reduce Boredom
+            </h2>
+
+            <p class="benefit-statement">
+              Limit the tedious work required to <strong>record, organize, and
+              present your accomplishments</strong>. Whether it's filling out
+              performance reviews, creating content for a good resume, or
+              convincing your boss you deserve a raise, we've got your back.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="viewport-wrapper">
+    <div class="content-wrapper">
+
+      <div class="form-wrapper">
+        <div class="form-inner-wrapper">
+
+          <p class="form-statement">
+            We're building a web site that will give you all of these benefits
+            and more. Subscribe to get notified when we launch, and receive a
+            <strong><em>discount</em></strong>!
+          </p>
+
+          <%= form_with(class: (!@contact.errors.empty? ? 'form form-with-errors' : 'form'), local: true, model: @contact, url: contact_path) do |f| %>
+
+            <div>
+              <%= f.label(:email, class: 'form-label') %>
+              <br />
+              <%= f.email_field(:email, class: 'form-field', placeholder: 'jsmith@example.com') %>
+              <br />
+              <%= field_error(@contact, :email, class: 'form-field-error', prefix: 'Email') %>
+            </div>
+
+            <div>
+              <%= f.submit('Subscribe now!', class: 'form-button', data: { 'disable-with': 'Subscribing now ...' }) %>
+            </div>
+
+
+          <% end %>
+
+          <p class="form-privacy">
+            We guarantee 100% privacy. Your information will not be shared.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="viewport-wrapper">
+    <div class="content-wrapper">
+
+      <div class="copywrite-wrapper">
+        <div class="copywrite-copy">
+          &copy; Skytop Software 2018. All rights reserved.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
