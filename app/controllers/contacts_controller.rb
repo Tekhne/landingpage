@@ -17,6 +17,7 @@ class ContactsController < ApplicationController
   end
 
   def show
+    redirect_to new_contact_path unless flash[:contacts_create_success]
   end
 
   private

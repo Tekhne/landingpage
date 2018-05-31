@@ -95,9 +95,23 @@ RSpec.describe ContactsController, type: :controller do
   end
 
   describe 'GET #show' do
-    it 'renders HTTP status :ok' do
-      get :show
-      expect(response).to have_http_status(:ok)
+    describe 'when flash["contacts_create_success"] is true' do
+      it 'renders HTTP status :ok' do
+        get :show, flash: { contacts_create_success: true }
+        expect(response).to have_http_status(:ok)
+      end
+
+      it 'renders :show template' do
+        get :show, flash: { contacts_create_success: true }
+        expect(response).to render_template(:show)
+      end
+    end
+
+    describe 'when flash["contacts_create_success"] is falsy' do
+      it 'redirects to new_contact_path' do
+        get :show
+        expect(response).to redirect_to(new_contact_path)
+      end
     end
   end
 end
