@@ -26,5 +26,12 @@ RSpec.describe ApplicationHelper, type: :helper do
           match(/>Test/)
       end
     end
+
+    describe 'when an optional class string is given' do
+      it 'returns field error containing class' do
+        expect(helper.field_error(model, attribute, class: 'test-class')).to \
+          match(/test-class/)
+      end
+    end
   end
 end
