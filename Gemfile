@@ -23,6 +23,7 @@ gem 'brakeman',                 '~> 4.3.0', group: [:development]
 gem 'capybara',                 '~> 3.1.1', group: [:test]
 gem 'dawnscanner',              '~> 1.6.8', group: [:development], require: false
 gem 'factory_bot_rails',        '~> 4.10.0', group: [:development, :test]
+gem 'font-awesome-sass',        '~> 5.0.13'
 gem 'listen',                   '>= 3.1.5', '< 3.2', group: [:development]
 gem 'pg',                       '~> 1.0.0'
 gem 'pry-rails',                '= 0.3.6', group: [:development, :test]
