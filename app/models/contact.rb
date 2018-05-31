@@ -21,10 +21,16 @@ class Contact < ApplicationRecord
 
   validates :email, format: { with: /\A\S+@\S+\z/ }
   validates :email, length: EMAIL_LENGTH
-  validates :normalized_email, uniqueness: true
+  validate :normalized_email_uniqueness
 
   # The before_validation callback seems to work better than others for this.
   before_validation :set_normalized_email
+
+  def normalized_email_uniqueness
+    return unless self.class.where(normalized_email: normalized_email).exists?
+    errors.add(:normalized_email, 'has already been taken')
+    errors.add(:email, 'has already been taken')
+  end
 
   def set_normalized_email
     self.normalized_email = email
@@ -50,7 +56,7 @@ class Contact < ApplicationRecord
 
   def check_reserved_email_addresses(email)
     return unless RESERVED_EMAIL.include?(parse_email(email).local)
-    errors.add(:email, 'contains a disallowed username')
+    errors.add(:email, 'contains a prohibited username')
     throw :abort
   end
 

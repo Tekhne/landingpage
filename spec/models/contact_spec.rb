@@ -3,7 +3,7 @@ require_relative '../support/custom_matchers/models'
 
 RSpec.describe Contact, type: :model do
   let(:contact) { build(:contact) }
-  let(:contact2) { build(:contact) }
+  let(:contact2) { build(:contact, email: contact.email.upcase) }
 
   context 'validations' do
     it 'ensures email format is valid' do
@@ -29,6 +29,7 @@ RSpec.describe Contact, type: :model do
       contact.save!
       contact2.email = contact.email
       expect(contact2).to be_invalid_for(:normalized_email)
+      expect(contact2).to be_invalid_for(:email)
     end
   end
 

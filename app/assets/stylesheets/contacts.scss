@@ -148,40 +148,8 @@
     margin-top: 1rem;
   }
 
-  .form-label {
-    font-family: $font-family-primary;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-
   .form-field {
-    background-color: $color-field-bg;
-    border-radius: $border-radius-lg;
-    border: none;
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-    color: $color-black;
-    font-family: $font-family-primary;
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-    outline: none;
-    padding: 1rem;
     width: 100%;
-
-    &::-webkit-input-placeholder {
-      color: $color-input-placeholder;
-    }
-
-    &:-ms-input-placeholder {
-      color: $color-input-placeholder;
-    }
-
-    &:-moz-placeholder {
-      color: $color-input-placeholder;
-    }
-
-    &::placeholder {
-      color: $color-input-placeholder;
-    }
   }
 
   .form-button {
@@ -229,5 +197,31 @@
     font-size: 0.8rem;
     justify-self: center;
     margin: 2rem 0;
+  }
+}
+
+.contacts-show {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+
+  .confirmation-wrapper {
+    align-self: center;
+    background-color: $color-success-light;
+    border-radius: $border-radius-lg;
+    border: 1px solid $color-success-border;
+    box-shadow: $box-shadow-light;
+    justify-self: center;
+    max-width: 35rem;
+    padding: 2rem;
+  }
+
+  .confirmation-content {
+    color: $color-success-dark;
+    font-size: 1.2rem;
+
+    a {
+      color: $color-success-dark;
+    }
   }
 }

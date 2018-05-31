@@ -19,11 +19,11 @@ $color-button-active: darken($color-green, 15%);
 $color-button-disabled: $color-gray;
 $color-button-hover: darken($color-green, 10%);
 $color-button: $color-green;
+$color-danger-dark: $color-red;
+$color-danger-light: rgba($color-red, 0.16);
 $color-danger: $color-red;
 $color-field-bg: lighten($color-gray, 10%);
 $color-field-border: $color-black;
-$color-field-error-bg: rgba($color-danger, 0.16);
-$color-field-error-fg: $color-danger;
 $color-form-bg: lighten($color-gray, 15%);
 $color-green-icon: rgba($color-green, 0.5);
 $color-input-placeholder: darken($color-gray, 20%);
@@ -31,6 +31,9 @@ $color-muted-text: rgba($color-black, 0.75);
 $color-orange-icon: rgba($color-orange, 0.4);
 $color-primary: $color-blue;
 $color-secondary: $color-orange;
+$color-success-border: rgb(90, 189, 50);
+$color-success-dark: rgb(52, 111, 29);
+$color-success-light: rgba($color-green, 0.5);
 $color-success: $color-green;
 
 $font-family-heading: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI',
