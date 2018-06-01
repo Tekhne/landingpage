@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'signing up:' do
+RSpec.describe 'subscribing:' do
   it 'successfully creates a new contact for user' do
     visit root_path
     expect(page).to have_current_path(root_path)
