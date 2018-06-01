@@ -58,10 +58,12 @@ RSpec.describe Contact, type: :model do
             eq('firstlast@example.com')
         end
 
-        it 'invalidates normalized_email when email uses reserved addresses' do
-          reserved_local = Contact::RESERVED_EMAIL.first
-          contact.email = "#{reserved_local}@example.com"
-          expect(contact).to be_invalid_for(:email)
+        describe 'when email uses a reserved address' do
+          it 'invalidates normalized_email' do
+            reserved_local = Contact::RESERVED_EMAIL.first
+            contact.email = "#{reserved_local}@example.com"
+            expect(contact).to be_invalid_for(:email)
+          end
         end
       end
     end
