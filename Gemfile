@@ -8,7 +8,7 @@ gem 'bundler', '~> 1.16.2'
 gem 'rails', '= 5.2.0'
 
 install_if -> { RUBY_PLATFORM =~ /(darwin|linux)/i } do
-  gem 'bootsnap', '~> 1.2.0', require: false
+  gem 'bootsnap', '~> 1.3.0', require: false
 end
 
 # gem 'bcrypt',                 '~> 3.1.7' # has_secure_password
