@@ -51,7 +51,8 @@ class Contact < ApplicationRecord
 
   def remove_ignored_email_characters(email)
     address = parse_email(email)
-    [address.local.delete('.').sub(/\+.*/, ''), address.domain].join('@')
+    return unless address.local && address.domain
+    [address.local.delete('.').sub(/\+.*/, ''), address.domain].compact.join('@')
   end
 
   def check_reserved_email_addresses(email)
