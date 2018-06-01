@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationHelper, type: :helper do
+  describe '#build_title' do
+    it 'returns string containing given string' do
+      expect(helper.build_title('test')).to match(/test/)
+    end
+  end
+
   describe '#field_error' do
     let(:attribute) { :email }
 
