@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def build_title(string)
-    "#{string} - Take Control of Your Career!"
+  def build_title(string=nil)
+    [string, 'Take Control of Your Career!'].compact.join(' - ')
   end
 
   def field_error(model, attribute, options = {})
