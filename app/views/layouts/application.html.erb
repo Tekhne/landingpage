@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +12,17 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+
   <body>
-    <noscript>Please enable JavaScript to use this web site.</noscript>
+
+    <noscript>
+      <div style="background-color: rgba(189, 0, 20, 0.16); color: #bd0014; margin-bottom: 4rem; padding: 1rem; text-align: center; vertical-align: middle; width: 100vw">
+        Please enable JavaScript to use this web site.
+      </div>
+    </noscript>
+
     <%= yield %>
+
   </body>
+
 </html>
