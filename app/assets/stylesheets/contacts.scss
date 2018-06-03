@@ -185,34 +185,31 @@
     font-style: italic;
     margin-top: 1rem;
   }
-
-  .copywrite-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .copywrite-copy {
-    align-self: center;
-    color: $color-muted-text;
-    font-size: 0.8rem;
-    justify-self: center;
-    margin: 2rem 0;
-  }
 }
 
 .contacts-show {
   display: grid;
   grid-template-columns: 1fr;
   height: 100vh;
+  padding: 1rem;
+
+  .confirmation-content-wrapper {
+    align-self: center;
+    justify-self: center;
+    max-width: 35rem;
+  }
+
+  .footer-wrapper {
+    align-self: center;
+    justify-self: center;
+    max-width: 35rem;
+  }
 
   .confirmation-wrapper {
-    align-self: center;
     background-color: $color-success-light;
     border-radius: $border-radius-lg;
     border: 1px solid $color-success-border;
     box-shadow: $box-shadow-light;
-    justify-self: center;
-    max-width: 35rem;
     padding: 2rem;
   }
 

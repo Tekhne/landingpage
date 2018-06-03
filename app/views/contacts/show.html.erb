@@ -1,16 +1,22 @@
 <% content_for :title, build_title('Confirmation') %>
 
 <div class="contacts-show">
-  <div class="confirmation-wrapper">
-    <div class="confirmation-content" data-t-notice-success>
-      <p>
-        You were successfully sign up! We're excited to show you the finished
-        web site. We'll send you an email when it's ready.
-      </p>
+  <div class="confirmation-content-wrapper">
+    <div class="confirmation-wrapper">
+      <div class="confirmation-content" data-t-notice-success>
+        <p>
+          You were successfully sign up! We're excited to show you the finished
+          web site. We'll send you an email when it's ready.
+        </p>
 
-      <%= link_to new_contact_path do %>
-        <%= icon('fas', 'redo-alt') %> Subscribe another email address
-      <% end %>
+        <%= link_to new_contact_path do %>
+          <%= icon('fas', 'redo-alt') %> Subscribe another email address
+        <% end %>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <%= render 'common/copywrite' %>
     </div>
   </div>
 </div>
