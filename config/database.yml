@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: landingpage_production
-  username: landingpage
+  username: <%= ENV['LANDINGPAGE_DATABASE_USERNAME'] %>
   password: <%= ENV['LANDINGPAGE_DATABASE_PASSWORD'] %>
