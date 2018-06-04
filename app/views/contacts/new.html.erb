@@ -12,8 +12,9 @@
 
             <div class="hero-statement-wrapper">
               <div class="hero-statement">
-                Use our career management and job search tools to help you get
-                organized and take the actions necessary for success.
+                Use the career management and job search tools we're building
+                to help you get organized and take the actions necessary for
+                success.
               </div>
             </div>
 
@@ -102,9 +103,10 @@
         <div class="form-inner-wrapper">
 
           <p class="form-statement">
-            We're building a new web site that will provide these benefits and
-            more. Subscribe to get news about our launch, and we'll give you a
-            <strong><em>discount</em></strong> when you sign up!
+            We're building a new web site named "Careerativity" that will
+            provide these benefits and more. Subscribe to get news about our
+            launch, and we'll give you a <strong><em>discount</em></strong>
+            when you sign up!
           </p>
 
           <%= form_with(class: (!@contact.errors.empty? ? 'form form-with-errors' : 'form'), local: true, model: @contact, url: contact_path) do |f| %>
