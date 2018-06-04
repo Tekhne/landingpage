@@ -20,7 +20,7 @@ end
 # gem 'redis',                  '~> 4.0' # Action Cable
 # gem 'tzinfo-data',            platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'brakeman',                 '~> 4.3.0', group: [:development]
-gem 'capybara',                 '~> 3.1.1', group: [:test]
+gem 'capybara',                 '~> 3.2.1', group: [:test]
 gem 'dawnscanner',              '~> 1.6.8', group: [:development], require: false
 gem 'factory_bot_rails',        '~> 4.10.0', group: [:development, :test]
 gem 'font-awesome-sass',        '~> 5.0.13'
@@ -36,5 +36,5 @@ gem 'selenium-webdriver',       '~> 3.12.0', group: [:test]
 gem 'spring',                   '~> 2.0.2', group: [:development]
 gem 'spring-commands-rspec',    '~> 1.0.4', group: [:development]
 gem 'spring-watcher-listen',    '~> 2.0.1', group: [:development]
-gem 'uglifier',                 '~> 4.1.10'
+gem 'uglifier',                 '~> 4.1.11'
 gem 'web-console',              '~> 3.6.2', group: [:development]
