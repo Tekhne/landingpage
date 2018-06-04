@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def build_title(string=nil)
+  def build_title(string = nil)
     [string, 'Take Control of Your Career!'].compact.join(' - ')
   end
 

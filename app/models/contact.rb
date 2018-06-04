@@ -53,7 +53,10 @@ class Contact < ApplicationRecord
     address = parse_email(email)
     # If address is invalid, let validators handle it.
     return unless address.local && address.domain
-    [address.local.delete('.').sub(/\+.*/, ''), address.domain].compact.join('@')
+    [
+      address.local.delete('.').sub(/\+.*/, ''),
+      address.domain
+    ].compact.join('@')
   end
 
   def check_reserved_email_addresses(email)
