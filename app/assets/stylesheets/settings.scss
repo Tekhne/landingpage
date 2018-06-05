@@ -6,13 +6,13 @@ $box-shadow-light: 5px 5px 12px 0 rgba(0, 0, 0, 0.15);
 
 // https://coolors.co/045fd6-d73e04-80d45f-273038-c7d2d8
 
-$color-black: rgb(39, 48, 56);
-$color-blue: rgb(4, 95, 214);
-$color-gray: rgb(199, 210, 216);
-$color-green: rgb(128, 212, 95);
-$color-orange: rgb(215, 62, 4);
-$color-red: rgb(189, 0, 20);
-$color-white: rgb(255, 255, 255);
+$color-black:  rgb(39, 48, 56);    // #273038
+$color-blue:   rgb(4, 95, 214);    // #045fd6
+$color-gray:   rgb(199, 210, 216); // #c7d2d8
+$color-green:  rgb(128, 212, 95);  // #80d45f
+$color-orange: rgb(215, 62, 4);    // #d73e04
+$color-red:    rgb(189, 0, 20);    // #bd0014
+$color-white:  rgb(255, 255, 255); // #ffffff
 
 $color-blue-icon: rgba($color-blue, 0.5);
 $color-button-active: darken($color-green, 15%);
