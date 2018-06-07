@@ -50,3 +50,4 @@ set :migration_role, :app
 set :rbenv_ruby, '2.5.1'
 set :rbenv_type, :user
 
+set :passenger_restart_command, 'sudo passenger-config restart-app'
