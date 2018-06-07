@@ -13,13 +13,16 @@ end
 
 # gem 'bcrypt',                 '~> 3.1.7' # has_secure_password
 # gem 'byebug',                 '~> 10.0.0', group: [:development, :test], platforms: [:mri, :mingw, :x64_mingw]
-# gem 'capistrano-rails',       group: :development # deployment
 # gem 'jbuilder',               '~> 2.5'
 # gem 'mini_magick',            '~> 4.8' # ActiveStorage
 # gem 'mini_racer',             platforms: :ruby
 # gem 'redis',                  '~> 4.0' # Action Cable
 # gem 'tzinfo-data',            platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'brakeman',                 '~> 4.3.0', group: [:development]
+gem 'brakeman',                 '~> 4.3.0', group: [:development], require: false
+gem 'capistrano',               '~> 3.11.0', group: [:development], require: false
+gem 'capistrano-passenger',     '= 0.2.0', group: [:development], require: false
+gem 'capistrano-rails',         '~> 1.4.0', group: [:development], require: false
+gem 'capistrano-rbenv',         '~> 2.1.3', group: [:development], require: false
 gem 'capybara',                 '~> 3.2.1', group: [:test]
 gem 'dawnscanner',              '~> 1.6.8', group: [:development], require: false
 gem 'factory_bot_rails',        '~> 4.10.0', group: [:development, :test]
