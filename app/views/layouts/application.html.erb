@@ -3,6 +3,21 @@
 
   <head>
     <meta charset="utf-8">
+
+    <% if Rails.env.production? %>
+
+      <%= javascript_include_tag 'https://www.googletagmanager.com/gtag/js?id=UA-120838736-1', async: true %>
+
+      <%= javascript_tag(nonce: true) do %>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120838736-1');
+      <% end %>
+
+    <% end %>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Careerativity helps you manage your career (job search, skill development, relationships, achievements, etc.).">
 

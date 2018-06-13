@@ -9,7 +9,7 @@ Rails.application.config.content_security_policy do |policy|
   policy.font_src    :self, 'https://fonts.gstatic.com'
 #   policy.img_src     :self, :https, :data
 #   policy.object_src  :none
-#   policy.script_src  :self, :https
+  policy.script_src  :self, 'https://www.googletagmanager.com'
   policy.style_src   :self, 'https://fonts.googleapis.com'
 
 #   # Specify URI for violation reports
