@@ -6,11 +6,11 @@
 
 Rails.application.config.content_security_policy do |policy|
   policy.default_src :self, 'https://*.careerativity.com'
-#   policy.font_src    :self, :https, :data
+  policy.font_src    :self, 'https://fonts.gstatic.com'
 #   policy.img_src     :self, :https, :data
 #   policy.object_src  :none
 #   policy.script_src  :self, :https
-  policy.style_src   :self, 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'
+  policy.style_src   :self, 'https://fonts.googleapis.com'
 
 #   # Specify URI for violation reports
 #   # policy.report_uri "/csp-violation-report-endpoint"
