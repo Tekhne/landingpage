@@ -66,16 +66,3 @@ body {
   font-size: 0.9rem;
   margin-top: 0.2rem;
 }
-
-.copywrite-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.copywrite-copy {
-  align-self: center;
-  color: $color-muted-text;
-  font-size: 0.8rem;
-  justify-self: center;
-  margin: 2rem 0;
-}
