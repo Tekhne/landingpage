@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+(
+    cd /home/deploy/landingpage/current && (
+        export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.1"
+        sudo /usr/bin/passenger-config restart-app /home/deploy/landingpage --ignore-app-not-running
+    )
+)

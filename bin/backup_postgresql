@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -e
+
+BASEDIR="/var/lib/postgresql"
+BACKUPSDIR="${BASEDIR}/backups"
+
+if [ ! -d "$BACKUPSDIR" ]; then
+    mkdir -p "$BACKUPSDIR"
+    chown postgres:postgres "$BACKUPSDIR"
+    chmod 700 "$BACKUPSDIR"
+fi
+
+FNAME="${BACKUPSDIR}/all"
+
+rm -f "${FNAME}.7.gz"
+
+for (( i = 6; i >= 1; i-- )); do
+    j=$(expr $i + 1)
+
+    if [ -f "${FNAME}.${i}.gz" ]; then
+        mv "${FNAME}.${i}.gz" "${FNAME}.${j}.gz"
+    fi
+done
+
+if [ -f "${FNAME}.gz" ]; then
+    mv "${FNAME}.gz" "${FNAME}.1.gz"
+fi
+
+# Backup all PostgreSQL databases.
+# TODO add --oids if apps use OID columns (e.g. foreign key constraints)
+pg_dumpall --clean --file "$FNAME"
+# Restore all databases (for reference).
+# psql -1 -f ${FNAME} postgres
+
+gzip "$FNAME"
+chown postgres:postgres "${FNAME}.gz"
+chmod 600 "${FNAME}.gz"
